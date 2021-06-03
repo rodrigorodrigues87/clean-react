@@ -17,13 +17,12 @@
     },
     "allowJs": true,
     "resolveJsonModule": true,
-    "outDir": "dist",
+    "outDir": "dist"
   },
   "include": [
     "src"
   ],
   "exclude": [
     "node_modules",
-    "/path/to/build/js/"
   ]
 }
