@@ -9,9 +9,8 @@
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "check-types": "tsc",
     "prepare": "husky install",
-    "pre-commit-lint": "yarn check-types && yarn lint-staged"
+    "pre-commit-lint": "yarn lint-staged"
   },
   "keywords": [],
   "author": "",
