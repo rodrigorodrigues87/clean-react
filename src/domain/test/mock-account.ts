@@ -5,7 +5,7 @@ import { AccountModel } from '../models'
 
 export const mockAuthentication = (): AuthenticationParams => ({
   email: faker.internet.email(),
-  pasword: faker.internet.password()
+  password: faker.internet.password()
 })
 
 export const mockAccountModel = (): AccountModel => ({
