@@ -9,6 +9,9 @@ type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>
 const Input: React.FC<Props> = (props: Props) => {
   const { state, setState } = useContext(Context)
   const error = state[`${props.name}Error`]
+  const enableInput = (event: React.FocusEvent<HTMLInputElement>): void => {
+    event.target.readOnly = false
+  }
 
   const handleChange = (event: React.FocusEvent<HTMLInputElement>): void => {
     setState({
@@ -27,7 +30,7 @@ const Input: React.FC<Props> = (props: Props) => {
 
   return (
     <div className={Styles.inputWrap}>
-      <input {...props} data-testid={props.name} onChange={handleChange} />
+      <input {...props} data-testid={props.name} readOnly onFocus={enableInput} onChange={handleChange} />
       <span data-testid={`${props.name}-status`} title={getTitle()} className={Styles.status}>{getStatus()}</span>
     </div>
   )
