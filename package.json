@@ -1,7 +1,8 @@
 {
   "name": "clean-react",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
+  "author": "Rodrigo Rodrigues",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
@@ -13,7 +14,6 @@
     "pre-commit-lint": "yarn lint-staged"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
