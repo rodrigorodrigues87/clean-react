@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/rodrigorodrigues87/clean-react.svg?branch=master)](https://travis-ci.com/rodrigorodrigues87/clean-react)
+[![Coverage Status](https://coveralls.io/repos/github/rodrigorodrigues87/clean-react/badge.svg?branch=master)](https://coveralls.io/github/rodrigorodrigues87/clean-react?branch=master)
 
 ## [**Link para o curso completo**](https://www.udemy.com/course/react-com-mango/?referralCode=552F88858EAE76346C8B)
 
