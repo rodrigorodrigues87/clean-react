@@ -1,4 +1,4 @@
-export type SuveryModel = {
+export type SurveyModel = {
   id: string
   question: string
   answers: [{
