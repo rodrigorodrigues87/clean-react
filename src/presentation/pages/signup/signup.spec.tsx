@@ -65,7 +65,7 @@ describe('SignUp Component', () => {
     makeSut({ validationError })
 
     Helper.testChildCount('error-wrap', 0)
-    Helper.testButtonIsDisabled('submit', true)
+    expect(screen.getByTestId('submit')).toBeDisabled()
     Helper.testStatusForField('name', validationError)
     Helper.testStatusForField('email', validationError)
     Helper.testStatusForField('password', validationError)
@@ -140,7 +140,7 @@ describe('SignUp Component', () => {
     Helper.populateField('password')
     Helper.populateField('passwordConfirmation')
 
-    Helper.testButtonIsDisabled('submit', false)
+    expect(screen.getByTestId('submit')).toBeEnabled()
   })
 
   test('Should show spinner on submit', async () => {
@@ -192,7 +192,6 @@ describe('SignUp Component', () => {
     await simulateValidSubmit()
 
     Helper.testElementText('main-error', error.message)
-
     Helper.testChildCount('error-wrap', 1)
   })
 
