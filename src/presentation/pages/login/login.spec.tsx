@@ -4,16 +4,17 @@ import { createMemoryHistory } from 'history'
 import faker from 'faker'
 import { render, fireEvent, waitFor, screen } from '@testing-library/react'
 
-import { ValidationStub, AuthenticationSpy, Helper } from '@/presentation/test'
+import { ValidationStub, Helper } from '@/presentation/test'
 import { Login } from '@/presentation/pages'
 import { ApiContext } from '@/presentation/contexts'
 
 import { InvalidCredentialsError } from '@/domain/errors'
-import { AccountModel } from '@/domain/models'
+import { AuthenticationSpy } from '@/domain/test'
+import { Authentication } from '@/domain/usecases'
 
 type SutTypes = {
   authenticationSpy: AuthenticationSpy
-  setCurrentAccountMock: (account: AccountModel) => void
+  setCurrentAccountMock: (account: Authentication.Model) => void
 }
 
 type SutParams = {
